@@ -17,7 +17,7 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 html,
@@ -73,7 +73,7 @@ ol {
 
 .title {
   color: #ffffff;
-  font-family: "Oswald", sans-serif ;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -96,7 +96,7 @@ ol {
   display: flex;
   height: 386px;
   width: 711px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .search-form {
@@ -116,7 +116,7 @@ ol {
   align-items: center;
   gap: 5px;
   margin: 0;
-} 
+}
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
@@ -127,17 +127,17 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text:hover{
+.search-form__label-text:hover {
   text-decoration: underline;
 }
 
-.search-form__fieldset:nth-child(2){
+.search-form__fieldset:nth-child(2) {
   margin-left: 11px;
 }
 
 .search-form__fieldset-title {
   color: #ffffff;
-  font-family: "Fira Sans Condensed",sans-serif ;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -153,7 +153,7 @@ ol {
   border-left: none;
   padding: 2.5px 14px 2.5px 0;
   color: rgba(255, 255, 255, 0.7);
-  font-family: "Fira Sans Condensed",sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -174,7 +174,7 @@ input:focus {
   outline: none;
 }
 
-.input:focus-visible{
+.input:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -183,7 +183,7 @@ input:focus {
   cursor: pointer;
   border: 1px solid #ffffff;
   color: #ffffff;
-  font-family: "Fira Sans Condensed",sans-serif ;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -223,21 +223,21 @@ input:focus {
   white-space: nowrap;
 }
 
-input[type="checkbox"] + span {
-  display: inline-block;
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
-  background-color: transparent;
   border: 1px solid #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  content: " ";
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-color: #ffffff;
-  border: 2px solid #1b1919; 
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 1px solid #1b1919;
 }
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
@@ -263,21 +263,28 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   margin-bottom: 30px;
 }
 
+.content__card-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* обнуление ссылочного подчеркивания у текста карточки */
+
 .content__card-link:hover h2,
 .content__card-link:hover p {
   border-bottom: 1px solid #fff;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
 }
 
 .content__card-link:focus-visible {
   border: 1px solid #fff;
-}
-
-.content__list-item:focus-within * {
-  outline: none;
 }
 
 .content__video-card {
@@ -288,13 +295,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
 }
 
 .content__video-card-title {
   color: #ffffff;
-  font-family: "Oswald",sans-serif ;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
@@ -309,19 +316,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 .content__video-card-description {
   margin-top: 6px;
   color: #ffffff;
-  font-family: "Fira Sans Condensed",sans-serif ;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 16px;
   max-width: 200px;
 }
-
-.content__card-link{
-  text-decoration: none;
-}
-
-/* обнуление ссылочного подчеркивания у текста карточки */
 
 .more-button {
   width: 100%;
