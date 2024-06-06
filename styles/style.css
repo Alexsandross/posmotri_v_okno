@@ -127,7 +127,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text{
   text-decoration: underline;
 }
 
@@ -172,11 +172,6 @@ ol {
 
 input:focus {
   outline: none;
-}
-
-.input:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .button {
@@ -260,6 +255,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__list-item {
   width: 398px;
+}
+
+.content__list-item:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
@@ -277,6 +275,10 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__card-link:active {
   background-color: #545050;
+}
+
+.content__card-link_current{
+  background-color:#545050;
 }
 
 .content__card-link:focus {
